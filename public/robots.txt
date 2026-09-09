@@ -1,0 +1,5 @@
+User-Agent: *
+Allow: /
+
+Host: https://vikahelp.me
+Sitemap: https://vikahelp.me/sitemap.xml
