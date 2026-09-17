@@ -39,5 +39,33 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     },
   };
 
-  return <html lang="ru"><body><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />{children}</body></html>;
+  return (
+    <html lang="ru">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CW3Z9ZZKHZ" />
+        <script dangerouslySetInnerHTML={{ __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-CW3Z9ZZKHZ');
+          document.addEventListener('click', function(event) {
+            var link = event.target instanceof Element ? event.target.closest('a[href]') : null;
+            if (!link) return;
+            var url = new URL(link.href);
+            if (url.hostname !== 't.me') return;
+            gtag('event', 'telegram_click', {
+              link_text: link.textContent.trim(),
+              link_url: url.origin + url.pathname,
+              section: link.closest('section')?.id || 'navigation',
+              transport_type: 'beacon'
+            });
+          });
+        ` }} />
+      </head>
+      <body>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
+        {children}
+      </body>
+    </html>
+  );
 }
