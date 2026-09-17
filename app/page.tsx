@@ -52,7 +52,7 @@ export default function Home() {
           <a href="#services">Услуги</a>
           <a href="#about">Обо мне</a>
           <a href="#faq">Вопросы</a>
-          <a className="nav-cta" href={telegramLink('Пишу с сайта и хочу уточнить: ')} target="_blank" rel="noreferrer">Написать Вике</a>
+          <a className="nav-cta" data-service="general" data-button-id="header" href={telegramLink('Пишу с сайта и хочу уточнить: ')} target="_blank" rel="noreferrer">Написать Вике</a>
         </nav>
       </header>
 
@@ -63,7 +63,7 @@ export default function Home() {
           <p className="intro">Привет! Меня зовут Вика. Я живу в Нови-Саде больше трёх лет и помогаю другим проходить через сербскую бюрократию проще и спокойнее.</p>
           <p>Помогу открыть ИП, подготовиться к подаче на ВНЖ или решить отдельный вопрос в банке, МУПе и другом учреждении.</p>
           <div className="hero-actions">
-            <a className="button primary" href={telegramLink('Мне нужна помощь с документами или бюрократией в Сербии. Моя ситуация: ')} target="_blank" rel="noreferrer">Рассказать о своей ситуации</a>
+            <a className="button primary" data-service="general" data-button-id="hero" href={telegramLink('Мне нужна помощь с документами или бюрократией в Сербии. Моя ситуация: ')} target="_blank" rel="noreferrer">Рассказать о своей ситуации</a>
           </div>
           <p className="place-note"><span className="dot" />Ваш человек на месте</p>
         </div>
@@ -96,7 +96,7 @@ export default function Home() {
               <p>Помогу открыть ИП, временно приостановить его работу или возобновить деятельность.</p>
               <p>Подготовлю необходимые документы, объясню порядок действий и заранее расскажу, что потребуется от вас.</p>
               <p>Всё, что можно сделать без вашего личного участия, возьму на себя — с учётом ваших пожеланий и под вашим контролем.</p>
-              <a className="button secondary" href={telegramLink('Мне нужна помощь с ИП в Сербии. Моя ситуация: ')} target="_blank" rel="noreferrer">Помощь с ИП</a>
+              <a className="button secondary" data-service="ip" data-button-id="ip" href={telegramLink('Мне нужна помощь с ИП в Сербии. Моя ситуация: ')} target="_blank" rel="noreferrer">Помощь с ИП</a>
             </article>
 
             <article className="service-card" id="residence">
@@ -104,7 +104,7 @@ export default function Home() {
               <p>Помогу разобраться в процессе подачи и подготовить необходимые документы.</p>
               <p>Вместе проверим, что нужно собрать, в каком виде всё подготовить и что потребуется непосредственно при подаче.</p>
               <p>Всё, что можно собрать без вашего участия, я возьму на себя. Если потребуется ваше личное присутствие, заранее подготовимся, а при необходимости я пойду вместе с вами как помощник и переводчик.</p>
-              <a className="button secondary" href={telegramLink('Мне нужна помощь с подготовкой к подаче на ВНЖ. Моя ситуация: ')} target="_blank" rel="noreferrer">Нужна помощь с ВНЖ</a>
+              <a className="button secondary" data-service="residence" data-button-id="residence" href={telegramLink('Мне нужна помощь с подготовкой к подаче на ВНЖ. Моя ситуация: ')} target="_blank" rel="noreferrer">Нужна помощь с ВНЖ</a>
             </article>
 
             <article className="service-card" id="support">
@@ -112,7 +112,7 @@ export default function Home() {
               <p>Обратиться ко мне можно не только для сопровождения полного процесса легализации.</p>
               <p>Если вам нужно сходить в банк, МУП или другое учреждение, что-то уточнить, объяснить нестандартную ситуацию или разобраться с документом — я могу пойти вместе с вами.</p>
               <p>Поговорю с сотрудниками на сербском, задам нужные вопросы, помогу понять ответ и разобраться, что делать дальше.</p>
-              <a className="button secondary" href={telegramLink('Мне нужно сопровождение в учреждение. Моя ситуация: ')} target="_blank" rel="noreferrer">Нужно сопровождение</a>
+              <a className="button secondary" data-service="support" data-button-id="support" href={telegramLink('Мне нужно сопровождение в учреждение. Моя ситуация: ')} target="_blank" rel="noreferrer">Нужно сопровождение</a>
             </article>
           </div>
 
@@ -130,7 +130,7 @@ export default function Home() {
             </div>
             <div>
               <p>Не нужно заранее разбираться в процессе или выбирать услугу. Просто опишите ситуацию своими словами — я скажу, смогу ли помочь и в каком формате.</p>
-              <a className="button primary" href={telegramLink('Не совсем понимаю, какая именно помощь мне нужна, поэтому просто опишу ситуацию: ')} target="_blank" rel="noreferrer">Описать свою ситуацию</a>
+              <a className="button primary" data-service="unsure" data-button-id="unsure" href={telegramLink('Не совсем понимаю, какая именно помощь мне нужна, поэтому просто опишу ситуацию: ')} target="_blank" rel="noreferrer">Описать свою ситуацию</a>
             </div>
           </aside>
         </div>
@@ -152,7 +152,7 @@ export default function Home() {
             <li>Поговорить с сотрудниками на сербском</li>
             <li>Сориентироваться, если что-то пошло не по плану</li>
           </ul>
-          <a className="button secondary" href={telegramLink('Хочу обсудить помощь с бюрократией в Сербии. Моя ситуация: ')} target="_blank" rel="noreferrer">Написать Вике</a>
+          <a className="button secondary" data-service="general" data-button-id="why" href={telegramLink('Хочу обсудить помощь с бюрократией в Сербии. Моя ситуация: ')} target="_blank" rel="noreferrer">Написать Вике</a>
         </div>
       </section>
 
@@ -181,7 +181,7 @@ export default function Home() {
               </figure>
             </article>
           </section>
-          <a className="button primary reviews-cta" href={telegramLink('Мне тоже нужна помощь с документами и бюрократией в Сербии. Моя ситуация: ')} target="_blank" rel="noreferrer">Обсудить мою ситуацию</a>
+          <a className="button primary reviews-cta" data-service="general" data-button-id="reviews" href={telegramLink('Мне тоже нужна помощь с документами и бюрократией в Сербии. Моя ситуация: ')} target="_blank" rel="noreferrer">Обсудить мою ситуацию</a>
         </div>
       </section>
 
@@ -194,7 +194,7 @@ export default function Home() {
           <p>Я хорошо помню, каково это — только переехать и не понимать, куда идти, что спрашивать и правильно ли ты вообще всё делаешь.</p>
           <p>Со временем я со всем разобралась, а моего сербского хватает, чтобы самостоятельно решать вопросы в банках и государственных учреждениях.</p>
           <p>Теперь я могу делиться этим опытом с теми, кто пока только осваивается в Сербии.</p>
-          <a className="button primary" href={telegramLink('Хочу обратиться к вам за помощью. Моя ситуация: ')} target="_blank" rel="noreferrer">Написать Вике</a>
+          <a className="button primary" data-service="general" data-button-id="about" href={telegramLink('Хочу обратиться к вам за помощью. Моя ситуация: ')} target="_blank" rel="noreferrer">Написать Вике</a>
         </div>
         <div className="about-gallery">
           <Image className="about-main" src="/vika-city.jpeg" alt="Вика в центре Нови-Сада" width={960} height={1280} />
@@ -227,7 +227,7 @@ export default function Home() {
             <h2>Расскажите, какая у вас ситуация</h2>
             <p>Необязательно заранее разбираться в процессе и понимать, какая именно услуга вам нужна. Дальше разберёмся вместе.</p>
           </div>
-          <a className="button primary" href={telegramLink('Хочу проконсультироваться по своей ситуации в Сербии: ')} target="_blank" rel="noreferrer">Написать Вике</a>
+          <a className="button primary" data-service="general" data-button-id="final" href={telegramLink('Хочу проконсультироваться по своей ситуации в Сербии: ')} target="_blank" rel="noreferrer">Написать Вике</a>
         </div>
       </section>
 
@@ -247,7 +247,7 @@ export default function Home() {
               <p><strong>E-mail:</strong> <a href="mailto:powerenova@gmail.com">powerenova@gmail.com</a></p>
             </div>
             <div className="footer-links">
-              <a href={telegramLink('Пишу с сайта и хочу уточнить: ')} target="_blank" rel="noreferrer"><strong>Telegram</strong></a>
+              <a data-service="general" data-button-id="footer" href={telegramLink('Пишу с сайта и хочу уточнить: ')} target="_blank" rel="noreferrer"><strong>Telegram</strong></a>
               <a href="/pravne-informacije.pdf" target="_blank" rel="noreferrer">Pravne informacije</a>
               <a href="/politika-konfidencialnosti.pdf" target="_blank" rel="noreferrer">Политика конфиденциальности</a>
             </div>

@@ -1,0 +1,26 @@
+Ссылки для отслеживания источников в Google Analytics
+
+Публикации в чате «Специалисты Сербии» (постоянная ссылка):
+https://vikahelp.me/?utm_source=specialists_serbia&utm_medium=social&utm_campaign=services
+
+Личный профиль Telegram:
+https://vikahelp.me/?utm_source=telegram_profile&utm_medium=social&utm_campaign=profile
+
+Профиль Instagram:
+https://vikahelp.me/?utm_source=instagram&utm_medium=social&utm_campaign=profile
+
+Для каждого другого канала замените utm_source на его короткое название латиницей.
+Для разных публикаций в одном канале добавьте &utm_content=post_2026_09_17, меняя дату.
+Не указывайте в метках имена клиентов, телефоны и другие персональные данные.
+
+События по услугам с 17 сентября 2026:
+telegram_click_ip — ИП
+telegram_click_residence — ВНЖ
+telegram_click_support — сопровождение в учреждении
+telegram_click_unsure — пока не знаю, какая помощь нужна
+telegram_click_general — общие кнопки
+Каждый клик отправляет одно событие из списка. Старое telegram_click остаётся в истории.
+В отчёте Events фильтруйте названия по telegram_click_.
+Для переходов из чата используйте источник сеанса specialists_serbia и канал social.
+Одна постоянная ссылка объединяет все публикации; utm_content позволяет различать посты.
+Клик не подтверждает отправку сообщения или получение заявки.

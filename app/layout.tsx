@@ -53,7 +53,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             if (!link) return;
             var url = new URL(link.href);
             if (url.hostname !== 't.me') return;
-            gtag('event', 'telegram_click', {
+            var service = link.dataset.service || 'general';
+            if (!['ip', 'residence', 'support', 'unsure', 'general'].includes(service)) service = 'general';
+            gtag('event', 'telegram_click_' + service, {
+              service: service,
+              button_id: link.dataset.buttonId || 'unknown',
               link_text: link.textContent.trim(),
               link_url: url.origin + url.pathname,
               section: link.closest('section')?.id || 'navigation',
